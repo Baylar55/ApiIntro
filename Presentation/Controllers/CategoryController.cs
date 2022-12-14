@@ -17,7 +17,7 @@ namespace Presentation.Controllers
 
         #region Documentation
         /// <summary>
-        /// Kateqoriyaların siyahısını qaytarır
+        /// Get all categories
         /// </summary>
         /// <returns></returns>
 #endregion
@@ -29,7 +29,7 @@ namespace Presentation.Controllers
 
         #region Documentation
         /// <summary>
-        /// Kateqoriyanın id-ə görə tapılması üçün istifadə olunur
+        /// Get category by id
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
@@ -42,7 +42,7 @@ namespace Presentation.Controllers
 
         #region Documentation
         /// <summary>
-        /// Kateqoriyanın yaradılması üçün istifadə olunur
+        /// Create category
         /// </summary>
         /// <param name="model"></param>
         /// <returns></returns>
@@ -56,7 +56,7 @@ namespace Presentation.Controllers
 
         #region Documentation
         /// <summary>
-        /// Kateqoriya redaktə edilməsi üçün istifadə olunur
+        /// Update category
         /// </summary>
         /// <param name="model"></param>
         /// <returns></returns>
@@ -69,7 +69,7 @@ namespace Presentation.Controllers
 
         #region Documentation
         /// <summary>
-        /// Kateqoriyanın silinməsi üçün istifadə olunur
+        /// Delete Category
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>

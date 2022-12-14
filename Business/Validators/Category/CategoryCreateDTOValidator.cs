@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace Business.Validators.Category
 {
-    internal class CategoryCreateDTOValidator : AbstractValidator<CategoryCreateDTO>
+    public class CategoryCreateDTOValidator : AbstractValidator<CategoryCreateDTO>
     {
         public CategoryCreateDTOValidator()
         {
             RuleFor(x => x.Title)
                 .MinimumLength(3)
-                .WithMessage("Title uzunluğu minimum 3 olmalıdır");
+                .WithMessage("Minimum title length must be 3");
         }
     }
 }

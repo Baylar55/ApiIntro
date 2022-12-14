@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Kanan\\.nuget\\packages\\": {}
+    "C:\\Users\\user\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kanan\\Desktop\\Projects\\ApiTest\\Core\\Core.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Desktop\\api-intro\\Core\\Core.csproj",
       "projectName": "Core",
-      "projectPath": "C:\\Users\\Kanan\\Desktop\\Projects\\ApiTest\\Core\\Core.csproj",
-      "packagesPath": "C:\\Users\\Kanan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kanan\\Desktop\\Projects\\ApiTest\\Core\\obj\\",
+      "projectPath": "C:\\Users\\user\\Desktop\\api-intro\\Core\\Core.csproj",
+      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\user\\Desktop\\api-intro\\Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Kanan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

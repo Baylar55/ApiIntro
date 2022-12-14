@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kanan\\Desktop\\Projects\\ApiTest\\Presentation\\Presentation.csproj": {}
+    "C:\\Users\\user\\Desktop\\api-intro\\Presentation\\Presentation.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kanan\\Desktop\\Projects\\ApiTest\\Business\\Business.csproj": {
+    "C:\\Users\\user\\Desktop\\api-intro\\Business\\Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kanan\\Desktop\\Projects\\ApiTest\\Business\\Business.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Desktop\\api-intro\\Business\\Business.csproj",
         "projectName": "Business",
-        "projectPath": "C:\\Users\\Kanan\\Desktop\\Projects\\ApiTest\\Business\\Business.csproj",
-        "packagesPath": "C:\\Users\\Kanan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kanan\\Desktop\\Projects\\ApiTest\\Business\\obj\\",
+        "projectPath": "C:\\Users\\user\\Desktop\\api-intro\\Business\\Business.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\Desktop\\api-intro\\Business\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Kanan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Kanan\\Desktop\\Projects\\ApiTest\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "C:\\Users\\Kanan\\Desktop\\Projects\\ApiTest\\DataAccess\\DataAccess.csproj"
+              "C:\\Users\\user\\Desktop\\api-intro\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Users\\user\\Desktop\\api-intro\\DataAccess\\DataAccess.csproj"
               }
             }
           }
@@ -69,17 +69,17 @@
         }
       }
     },
-    "C:\\Users\\Kanan\\Desktop\\Projects\\ApiTest\\Core\\Core.csproj": {
+    "C:\\Users\\user\\Desktop\\api-intro\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kanan\\Desktop\\Projects\\ApiTest\\Core\\Core.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Desktop\\api-intro\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "C:\\Users\\Kanan\\Desktop\\Projects\\ApiTest\\Core\\Core.csproj",
-        "packagesPath": "C:\\Users\\Kanan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kanan\\Desktop\\Projects\\ApiTest\\Core\\obj\\",
+        "projectPath": "C:\\Users\\user\\Desktop\\api-intro\\Core\\Core.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\Desktop\\api-intro\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Kanan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -124,17 +124,17 @@
         }
       }
     },
-    "C:\\Users\\Kanan\\Desktop\\Projects\\ApiTest\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\user\\Desktop\\api-intro\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kanan\\Desktop\\Projects\\ApiTest\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Desktop\\api-intro\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\Kanan\\Desktop\\Projects\\ApiTest\\DataAccess\\DataAccess.csproj",
-        "packagesPath": "C:\\Users\\Kanan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kanan\\Desktop\\Projects\\ApiTest\\DataAccess\\obj\\",
+        "projectPath": "C:\\Users\\user\\Desktop\\api-intro\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\Desktop\\api-intro\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Kanan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -148,8 +148,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Kanan\\Desktop\\Projects\\ApiTest\\Core\\Core.csproj": {
-                "projectPath": "C:\\Users\\Kanan\\Desktop\\Projects\\ApiTest\\Core\\Core.csproj"
+              "C:\\Users\\user\\Desktop\\api-intro\\Core\\Core.csproj": {
+                "projectPath": "C:\\Users\\user\\Desktop\\api-intro\\Core\\Core.csproj"
               }
             }
           }
@@ -199,17 +199,17 @@
         }
       }
     },
-    "C:\\Users\\Kanan\\Desktop\\Projects\\ApiTest\\Presentation\\Presentation.csproj": {
+    "C:\\Users\\user\\Desktop\\api-intro\\Presentation\\Presentation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kanan\\Desktop\\Projects\\ApiTest\\Presentation\\Presentation.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Desktop\\api-intro\\Presentation\\Presentation.csproj",
         "projectName": "Presentation",
-        "projectPath": "C:\\Users\\Kanan\\Desktop\\Projects\\ApiTest\\Presentation\\Presentation.csproj",
-        "packagesPath": "C:\\Users\\Kanan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kanan\\Desktop\\Projects\\ApiTest\\Presentation\\obj\\",
+        "projectPath": "C:\\Users\\user\\Desktop\\api-intro\\Presentation\\Presentation.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\Desktop\\api-intro\\Presentation\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Kanan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -223,8 +223,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Kanan\\Desktop\\Projects\\ApiTest\\Business\\Business.csproj": {
-                "projectPath": "C:\\Users\\Kanan\\Desktop\\Projects\\ApiTest\\Business\\Business.csproj"
+              "C:\\Users\\user\\Desktop\\api-intro\\Business\\Business.csproj": {
+                "projectPath": "C:\\Users\\user\\Desktop\\api-intro\\Business\\Business.csproj"
               }
             }
           }

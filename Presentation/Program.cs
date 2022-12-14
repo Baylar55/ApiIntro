@@ -24,12 +24,14 @@ builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(conn
 #region Repositories
 
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+builder.Services.AddScoped<IDepartmentRepository, DepartmentRepository>();
 
 #endregion
 
 #region Services
 
 builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<IDepartmentService, DepartmentService>();
 
 #endregion
 

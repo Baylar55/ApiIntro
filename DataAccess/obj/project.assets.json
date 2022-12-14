@@ -40,12 +40,12 @@
         },
         "compile": {
           "ref/netcoreapp3.1/Microsoft.Data.SqlClient.dll": {
-            "related": ".xml;.pdb"
+            "related": ".pdb;.xml"
           }
         },
         "runtime": {
           "lib/netcoreapp3.1/Microsoft.Data.SqlClient.dll": {
-            "related": ".xml;.pdb"
+            "related": ".pdb;.xml"
           }
         },
         "runtimeTargets": {
@@ -2029,19 +2029,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Kanan\\.nuget\\packages\\": {}
+    "C:\\Users\\user\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kanan\\Desktop\\Projects\\ApiTest\\DataAccess\\DataAccess.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Desktop\\api-intro\\DataAccess\\DataAccess.csproj",
       "projectName": "DataAccess",
-      "projectPath": "C:\\Users\\Kanan\\Desktop\\Projects\\ApiTest\\DataAccess\\DataAccess.csproj",
-      "packagesPath": "C:\\Users\\Kanan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kanan\\Desktop\\Projects\\ApiTest\\DataAccess\\obj\\",
+      "projectPath": "C:\\Users\\user\\Desktop\\api-intro\\DataAccess\\DataAccess.csproj",
+      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\user\\Desktop\\api-intro\\DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Kanan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2055,8 +2055,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Kanan\\Desktop\\Projects\\ApiTest\\Core\\Core.csproj": {
-              "projectPath": "C:\\Users\\Kanan\\Desktop\\Projects\\ApiTest\\Core\\Core.csproj"
+            "C:\\Users\\user\\Desktop\\api-intro\\Core\\Core.csproj": {
+              "projectPath": "C:\\Users\\user\\Desktop\\api-intro\\Core\\Core.csproj"
             }
           }
         }

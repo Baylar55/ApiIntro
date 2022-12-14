@@ -14,7 +14,7 @@ namespace Business.Validators.Category
         {
             RuleFor(x => x.Title)
                 .MinimumLength(3)
-                .WithMessage("Title minimum uzunluğu 3 olmalıdır");
+                .WithMessage("Minimum title length must be 3");
         }
     }
 }

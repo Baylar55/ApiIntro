@@ -4,140 +4,136 @@ using Business.Services.Abstraction;
 using Business.Validators.Category;
 using Core.Entities;
 using DataAccess.Repositories.Abstraction;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Business.Services.Implementation
+
+namespace Business.Services.Implementation;
+
+public class CategoryService : ICategoryService
 {
-    public class CategoryService : ICategoryService
+    private readonly ICategoryRepository _categoryRepository;
+
+    public CategoryService(ICategoryRepository categoryRepository)
     {
-        private readonly ICategoryRepository _categoryRepository;
+        _categoryRepository = categoryRepository;
+    }
 
-        public CategoryService(ICategoryRepository categoryRepository)
+    public async Task<Response<CategoryResponseDTO>> GetAllAsync()
+    {
+        var response = new Response<CategoryResponseDTO>()
         {
-            _categoryRepository = categoryRepository;
-        }
-
-        public async Task<Response<CategoryResponseDTO>> GetAllAsync()
-        {
-            var response = new Response<CategoryResponseDTO>()
+            Data = new CategoryResponseDTO
             {
-                Data = new CategoryResponseDTO
-                {
-                    Categories = await _categoryRepository.GetAllAsync()
-                }
-            };
+                Categories = await _categoryRepository.GetAllAsync()
+            }
+        };
 
+        return response;
+    }
+
+    public async Task<Response<CategoryItemResponseDTO>> GetAsync(int id)
+    {
+        var response = new Response<CategoryItemResponseDTO>();
+
+        var category = await _categoryRepository.GetAsync(id);
+        if (category == null)
+        {
+            response.Errors.Add("Category NotFound");
+            response.Status = StatusCode.NotFound;
             return response;
         }
 
-        public async Task<Response<CategoryItemResponseDTO>> GetAsync(int id)
+        response.Data = new CategoryItemResponseDTO
         {
-            var response = new Response<CategoryItemResponseDTO>();
+            Category = category
+        };
 
-            var category = await _categoryRepository.GetAsync(id);
-            if (category == null)
-            {
-                response.Errors.Add("Kateqoriya tapılmadı");
-                response.Status = StatusCode.NotFound;
-                return response;
-            }
+        return response;
+    }
 
-            response.Data = new CategoryItemResponseDTO
-            {
-                Category = category
-            };
+    public async Task<Response> CreateAsync(CategoryCreateDTO model)
+    {
+        var response = new Response();
+        CategoryCreateDTOValidator validator = new CategoryCreateDTOValidator();
+        var result = validator.Validate(model);
 
+        if (!result.IsValid)
+        {
+            foreach (var error in result.Errors)
+                response.Errors.Add(error.ErrorMessage);
+
+            response.Status = StatusCode.BadRequest;
             return response;
         }
 
-        public async Task<Response> CreateAsync(CategoryCreateDTO model)
+        var isExist = await _categoryRepository.AnyAsync(c => c.Title.ToLower().Trim() == model.Title.ToLower().Trim());
+        if (isExist)
         {
-            var response = new Response();
-            CategoryCreateDTOValidator validator = new CategoryCreateDTOValidator();
-            var result = validator.Validate(model);
-
-            if (!result.IsValid)
-            {
-                foreach (var error in result.Errors)
-                    response.Errors.Add(error.ErrorMessage);
-
-                response.Status = StatusCode.BadRequest;
-                return response;
-            }
-
-            var isExist = await _categoryRepository.AnyAsync(c => c.Title.ToLower().Trim() == model.Title.ToLower().Trim());
-            if (isExist)
-            {
-                response.Errors.Add("Bu adda kateqoriya artıq mövcuddur");
-                response.Status = StatusCode.BadRequest;
-                return response;
-            }
-
-            var category = new Category
-            {
-                Title = model.Title,
-                CreatedAt = DateTime.Now
-            };
-
-            await _categoryRepository.CreateAsync(category);
+            response.Errors.Add("This category is already exist");
+            response.Status = StatusCode.BadRequest;
             return response;
         }
 
-        public async Task<Response> UpdateAsync(CategoryUpdateDTO model)
+        var category = new Category
         {
-            var response = new Response();
-            var validator = new CategoryUpdateDTOValidator();
-            var result = validator.Validate(model);
+            Title = model.Title,
+            CreatedAt = DateTime.Now
+        };
 
-            if (!result.IsValid)
-            {
-                foreach (var error in result.Errors)
-                    response.Errors.Add(error.ErrorMessage);
+        await _categoryRepository.CreateAsync(category);
+        return response;
+    }
 
-                response.Status = StatusCode.BadRequest;
-                return response;
-            }
+    public async Task<Response> UpdateAsync(CategoryUpdateDTO model)
+    {
+        var response = new Response();
+        var validator = new CategoryUpdateDTOValidator();
+        var result = validator.Validate(model);
 
-            var isExist = await _categoryRepository.AnyAsync(c => c.Title.ToLower().Trim() == model.Title.ToLower().Trim() && c.Id != model.Id);
-            if (isExist)
-            {
-                response.Errors.Add("Bu adda kateqoriya artıq mövcuddur");
-                response.Status = StatusCode.BadRequest;
-                return response;
-            }
+        if (!result.IsValid)
+        {
+            foreach (var error in result.Errors)
+                response.Errors.Add(error.ErrorMessage);
 
-            var category = await _categoryRepository.GetAsync(model.Id);
-            if (category == null)
-            {
-                response.Errors.Add("Kateqoriya tapılmadı");
-                response.Status = StatusCode.NotFound;
-                return response;
-            }
-
-            category.Title = model.Title;
-
-            await _categoryRepository.UpdateAsync(category);
+            response.Status = StatusCode.BadRequest;
             return response;
         }
 
-        public async Task<Response> DeleteAsync(int id)
+        var isExist = await _categoryRepository.AnyAsync(c => c.Title.ToLower().Trim() == model.Title.ToLower().Trim() && c.Id != model.Id);
+        if (isExist)
         {
-            var response = new Response();
-
-            var category = await _categoryRepository.GetAsync(id);
-            if (category == null)
-            {
-                response.Errors.Add("Kateqoriya tapılmadı");
-                response.Status = StatusCode.NotFound;
-                return response;
-            }
-
-            await _categoryRepository.DeleteAsync(category);
+            response.Errors.Add("This category is already exist");
+            response.Status = StatusCode.BadRequest;
             return response;
         }
+
+        var category = await _categoryRepository.GetAsync(model.Id);
+        if (category == null)
+        {
+            response.Errors.Add("Category NotFound");
+            response.Status = StatusCode.NotFound;
+            return response;
+        }
+
+        category.Title = model.Title;
+
+        await _categoryRepository.UpdateAsync(category);
+        return response;
+    }
+
+    public async Task<Response> DeleteAsync(int id)
+    {
+        var response = new Response();
+
+        var category = await _categoryRepository.GetAsync(id);
+        if (category == null)
+        {
+            response.Errors.Add("Category Not Found");
+            response.Status = StatusCode.NotFound;
+            return response;
+        }
+
+        await _categoryRepository.DeleteAsync(category);
+        return response;
     }
 }
+

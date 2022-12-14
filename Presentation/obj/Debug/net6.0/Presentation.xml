@@ -6,20 +6,20 @@
     <members>
         <member name="M:Presentation.Controllers.CategoryController.GetAll">
             <summary>
-            Kateqoriyaların siyahısını qaytarır
+            Get all categories
             </summary>
             <returns></returns>
         </member>
         <member name="M:Presentation.Controllers.CategoryController.Get(System.Int32)">
             <summary>
-            Kateqoriyanın id-ə görə tapılması üçün istifadə olunur
+            Get category by id
             </summary>
             <param name="id"></param>
             <returns></returns>
         </member>
         <member name="M:Presentation.Controllers.CategoryController.Create(Business.DTOs.Category.Request.CategoryCreateDTO)">
             <summary>
-            Kateqoriyanın yaradılması üçün istifadə olunur
+            Create category
             </summary>
             <param name="model"></param>
             <returns></returns>
@@ -27,16 +27,50 @@
         </member>
         <member name="M:Presentation.Controllers.CategoryController.Update(Business.DTOs.Category.Request.CategoryUpdateDTO)">
             <summary>
-            Kateqoriya redaktə edilməsi üçün istifadə olunur
+            Update category
             </summary>
             <param name="model"></param>
             <returns></returns>
         </member>
         <member name="M:Presentation.Controllers.CategoryController.Delete(System.Int32)">
             <summary>
-            Kateqoriyanın silinməsi üçün istifadə olunur
+            Delete Category
             </summary>
             <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Presentation.Controllers.DepartmentController.GetAll">
+            <summary>
+            Get all Departments
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Presentation.Controllers.DepartmentController.Get(System.Int32)">
+            <summary>
+            Get department by id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Presentation.Controllers.DepartmentController.Create(Business.DTOs.Department.Request.DepartmentCreateDTO)">
+            <summary>
+            Create department
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Presentation.Controllers.DepartmentController.Update(Business.DTOs.Department.Request.DepartmentUpdateDTO)">
+            <summary>
+            Update department
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Presentation.Controllers.DepartmentController.Delete(System.Int32)">
+            <summary>
+            Delete department
+            </summary>
+            <param name="model"></param>
             <returns></returns>
         </member>
     </members>

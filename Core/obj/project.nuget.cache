@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BOq0NoIcqsivtcmAOI8Vn1Ikcl9gdofhoGoLlU++ZWwEDBcfSjTNuVSnkWnKYC+xQSKCiuiTj19U77i8VOAmYA==",
+  "dgSpecHash": "xqiMyouOqh9PKHhXRhdimtuqJmvTHyHNaEaEXkeFTffnlZJDO64+tiAx8e4Gm59SuxUI2UUJeMBdHuWke6f2yw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Kanan\\Desktop\\Projects\\ApiTest\\Core\\Core.csproj",
+  "projectFilePath": "C:\\Users\\user\\Desktop\\api-intro\\Core\\Core.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
